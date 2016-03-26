@@ -1,9 +1,4 @@
-angular.module('InfamousCriminals')
-.controller('CriminalsController', CriminalsController);
-
-CriminalsController.$inject = ['$http', '$scope'];
-
-function CriminalsController($http, $scope){
+angular.module('InfamousCriminals').controller('CriminalsController', ['$scope', '$http', function($scope, $http){
   $scope.all = [];
   $scope.addCriminal = addCriminal;
   $scope.newCriminal = {};
@@ -37,4 +32,4 @@ function CriminalsController($http, $scope){
       });
   }
 
-}
+}]);
